@@ -1,0 +1,27 @@
+{
+  "name": "apiculture-data-base",
+  "description": "Apiculture Data Base",
+  "main": "index.js",
+  "authors": [
+    "Wesley Moraes"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "apiculture",
+    "homeproject",
+    "bee"
+  ],
+  "homepage": "https://github.com/moraesWesley/apiculture-data-base",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-route": "^1.6.6",
+    "angular-animate": "^1.6.6"
+  }
+}

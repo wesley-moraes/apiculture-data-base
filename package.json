@@ -1,0 +1,30 @@
+{
+  "name": "apiculture-data-base",
+  "version": "1.0.0",
+  "description": "Apiculture Data Base",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moraesWesley/apiculture-data-base.git"
+  },
+  "keywords": [
+    "apiculture",
+    "homeproject",
+    "bee"
+  ],
+  "author": "Wesley Moraes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moraesWesley/apiculture-data-base/issues"
+  },
+  "homepage": "https://github.com/moraesWesley/apiculture-data-base#readme",
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
