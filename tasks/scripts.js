@@ -23,6 +23,11 @@ gulp.task('copy-scripts', function(){
 
     gulp
         .src(config.vendor_path_js)
-        .pipe(gulp.dest(config.build_vendor_path_js))
+        .pipe(gulp.dest(config.build_vendor_path_js + '/../'))
+        .pipe(liveReload());
+
+    gulp
+        .src(config.assets_path + '/*.js')
+        .pipe(gulp.dest(config.build_vendor_path_js + '/../'))
         .pipe(liveReload());
 })
