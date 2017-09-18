@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head ng-app="myBeeApp">
+<html lang="en" ng-app="myBeeApp">
+<head >
     <meta charset="UTF-8">
     <title>Apiculture DataBase</title>
 
@@ -13,11 +13,18 @@
     <script type="text/javascript" src="../angular-route.min.js"></script>
     <script type="text/javascript" src="../app.js"></script>
 
+    <!--Controllers-->
+    <script type="text/javascript" src="../js/controllers/login/login-create.js"></script>
+
 <!--    <base href="/">-->
 </head>
 <body>
     <h1>Working?</h1>
-    <a href="login">Login</a>
+    <a href="#!/login">login</a>
+    <a href="#!/configuration">Configurações</a>
+    <a href="#!/singup">CADASTRE-SE</a>
+    <a href="#!/recovery-password">ESQUECI MINHA SENHA</a>
+<!--    <a href="#!/"></a>-->
     <main ng-view></main>
 </body>
 </html>
