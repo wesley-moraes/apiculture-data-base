@@ -1,23 +1,30 @@
-<h1>Home Page</h1>
 <p>Seja bem vindo: {{namePerson}}</p>
-
-<div class="main-box-login content-aling-center">
-    <div class="hexagono content-aling-center"></div>
-    <div class="wrapper-content-login">
-        <div>
-            <input type="text" ng-model="email" placeholder="email">
-        </div>
-        <div>
-            <input type="password" ng-model="password" placeholder="senha">
-        </div>
-        <div>
-            <input type="button" value="Entrar">
-        </div>
-        <div>
-            <a href="#!/singup">CADASTRE-SE</a>
-            <a href="#!/recovery-password">ESQUECI MINHA SENHA</a>
-        </div>
+<div class="container-login w-100 h-100 f-left">
+    <div class="main-box-login content-aling-center">
+        <div class="hexagono content-aling-center"></div>
+        <div class="wrapper-content-login f-left w-100">
+           <img src="../images/small-hexagonos3.png" alt="">
+           <img src="../images/small-hexagonos2.png" alt="">
+           <img src="../images/small-hexagonos1.png" alt="">
+            <div>
+                <input type="email" ng-model="email" placeholder="email">
+            </div>
+            <div>
+                <input type="password" ng-model="password" placeholder="senha">
+            </div>
+            <div>
+                <input type="button" value="Entrar" class="customButtonIndex w-100">
+            </div>
+            <div>
+               <div class="w-50 f-left">
+                    <a href="#!/singup">CADASTRE-SE</a>
+                </div>
+                <div class="w-50 f-left">
+                    <a href="#!/recovery-password" class="f-right">ESQUECI A SENHA</a>
+                </div>
+            </div>
+        </div><!-- wrapper-content-login -->
     </div>
-</div>
 
-<p>Base de dados Apicultura</p>
+    <p>Base de dados Apicultura</p>
+</div>

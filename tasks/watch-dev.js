@@ -5,8 +5,8 @@ var liveReload = require('gulp-livereload'),
 gulp.task('watch-dev', function(){
 
     liveReload.listen();
-    gulp.start('copy-html', 'copy-styles', 'copy-scripts');
+    gulp.start('copy-html', 'copy-styles', 'copy-scripts', 'copy-images');
     gulp.watch(config.assets_path + '/**', [
-        'copy-html', 'copy-styles', 'copy-scripts'
+        'copy-html', 'copy-styles', 'copy-scripts', 'copy-images'
     ]);
 });
