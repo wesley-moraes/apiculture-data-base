@@ -2,10 +2,101 @@
   box-sizing: border-box;
 }
 
-h1 {
-  color: red;
+a, button, input {
+  outline: none;
 }
 
-h1 a {
-  color: blue;
+a:hover, button:hover, input:hover {
+  outline: none;
+}
+
+a:click, button:click, input:click {
+  outline: none;
+}
+
+a:active, button:active, input:active {
+  outline: none;
+}
+
+input[type="text"], input[type="password"], input[type="button"] {
+  background-color: transparent;
+}
+
+input[type="text"], input[type="password"], input[type="button"] {
+  border: 0px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.content-aling-center {
+  margin: 0 auto;
+  display: table;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.hexagono {
+  position: relative;
+  display: block;
+  background-color: #c23500;
+  width: 80px;
+  height: 46.51163px;
+  z-index: 9;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.hexagono:hover {
+  background-color: #ff4600;
+}
+
+.hexagono::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  transform: rotate(60deg);
+  background-color: inherit;
+}
+
+.hexagono::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0px;
+  width: inherit;
+  height: inherit;
+  transform: rotate(-60deg);
+  background-color: inherit;
+}
+
+/****************/
+/*** APP CSS***/
+/****************/
+.main-box-login {
+  width: 39%;
+  background-color: #fb4500;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background-clip: padding-box;
 }

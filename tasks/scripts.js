@@ -19,15 +19,15 @@ gulp.task('copy-scripts', function(){
         config.assets_path + '/js/**/*.js'
         ])
         .pipe(gulp.dest(config.build_path_js))
-        .pipe(liveReload());
+        .pipe(liveReload()); //all js
 
     gulp
         .src(config.vendor_path_js)
         .pipe(gulp.dest(config.build_vendor_path_js + '/../'))
-        .pipe(liveReload());
+        .pipe(liveReload()); //vendor
 
     gulp
         .src(config.assets_path + '/*.js')
         .pipe(gulp.dest(config.build_vendor_path_js + '/../'))
-        .pipe(liveReload());
+        .pipe(liveReload()); //app.js
 })

@@ -1,13 +1,12 @@
-/*Angular Controller*/
 angular
     .module('myBeeApp.controllers')
-    .controller('loginCreate', loginCreate);
+    .controller('login', login);
 
-loginCreate.$inject = [
+login.$inject = [
     '$scope'
 ];
 
-function loginCreate(
+function login(
     $scope
 ){
     //alert('Login Create');

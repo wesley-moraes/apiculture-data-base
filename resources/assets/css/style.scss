@@ -1,9 +1,133 @@
+//My reset
 *{
     box-sizing: border-box;
 }
-h1{
-    color: red;
-    a{
-        color: blue;
+a, button, input{
+    outline: none;
+
+    &:hover{
+        outline: none;
     }
+    &:click{
+        outline: none;
+    }
+    &:active{
+        outline: none;
+    }
+}
+input[type="text"], input[type="password"], input[type="button"]{
+    background-color: transparent;
+}
+input[type="text"], input[type="password"], input[type="button"]{
+    border: 0px;
+}
+
+//Presets
+$w100 : 100%;
+$w50 : 50%;
+.w-100{width: $w100;}
+.w-50{width:  $w50}
+.content-aling-center{
+    margin: 0 auto;
+    display: table;
+}
+.text-align-center{
+    text-align: center;
+}
+.f-left{
+    float: left;
+}
+.f-right{
+    float: right;
+}
+
+//Mixins
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box; // stops bg color from leaking outside the border:
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//css transition and animation
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+//Fonts
+//@mixin font-montserratmedium($font-size, $margin, $color){
+//    font-family: 'montserratmedium';
+//    font-size: $font-size;
+//    color: $color;
+//    text-align: center;
+//    margin: $margin;
+//}
+
+$darkest-orange : #c23500;
+$dark-orange : #fb4500;
+$text-orange: #ff4600; //Also for the lines
+$text-yellow-green: #d8ff01; //The links
+$text-white: #fff;
+//login
+
+//Hexagono
+$hw : 80; //to keep the propotion
+$wh : ((50*$hw)/86)*1px; //to keep the propotion
+.hexagono{
+  position: relative;
+  display: block;
+  background-color: $darkest-orange;
+  width: $hw*1px;
+  height: $wh;
+  z-index: 9;
+    @include prefix(transition, all .5s, webkit moz);
+  &:hover{
+    background-color: $text-orange;
+  }
+  &::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: inherit;
+    height: inherit;
+    transform: rotate(60deg);
+    background-color: inherit;
+  }
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    width: inherit;
+    height: inherit;
+    transform: rotate(-60deg);
+    background-color: inherit;
+  }
+}
+
+
+/****************/
+/*** APP CSS***/
+/****************/
+.main-box-login{
+    width: 39%;
+    background-color: $dark-orange;
+    @include border-radius(7px);
 }

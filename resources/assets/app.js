@@ -9,16 +9,19 @@ myBeeApp.config(['$routeProvider', '$locationProvider', function($routeProvider,
     $routeProvider
         .when('/login', {
             templateUrl: 'login/login.html',
-            controller: 'loginCreate'
+            controller: 'login'
         })
         .when('/configuration', {
-            templateUrl: 'configuration/configuration.html'
+            templateUrl: 'configuration/configuration.html',
+            controller: 'configuration'
         })
         .when('/singup', {
-            templateUrl: 'singup/singup.html'
+            templateUrl: 'singup/singup.html',
+            controller: 'singup'
         })
         .when('/recovery-password', {
-            templateUrl: 'recovery-password/recovery-password.html'
+            templateUrl: 'recovery-password/recovery-password.html',
+            controller: 'recoveryPassword'
         })
         .otherwise({
             redirectTo: '/login'
