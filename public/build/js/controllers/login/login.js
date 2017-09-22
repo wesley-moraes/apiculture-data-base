@@ -10,5 +10,5 @@ function login(
     $scope
 ){
     //alert('Login Create');
-    $scope.namePerson = "28 Weeks Later";
+    //$scope.namePerson = "28 Weeks Later";
 }

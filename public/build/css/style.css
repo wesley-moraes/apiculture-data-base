@@ -1,3 +1,19 @@
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  cursor: pointer;
+  display: block;
+  width: 8px;
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -19,11 +35,11 @@ a:active, button:active, input:active {
   outline: none;
 }
 
-input[type="email"], input[type="text"], input[type="password"], input[type="button"] {
+input[type="email"], input[type="text"], input[type="password"], input[type="button"], input[type="number"] {
   background-color: transparent;
 }
 
-input[type="email"], input[type="text"], input[type="password"], input[type="button"] {
+input[type="email"], input[type="text"], input[type="password"], input[type="button"], input[type="number"] {
   border: 0px;
 }
 
@@ -146,31 +162,27 @@ body {
   margin-bottom: 20px;
 }
 
-.main-box-login .wrapper-content-login div input[type="text"], .main-box-login .wrapper-content-login div input[type="password"], .main-box-login .wrapper-content-login div input[type="email"] {
+.main-box-login .wrapper-content-login div input[type="text"], .main-box-login .wrapper-content-login div input[type="password"], .main-box-login .wrapper-content-login div input[type="email"], .main-box-login .wrapper-content-login div input[type="number"] {
   border-bottom: 1px solid #fff;
   width: 100%;
   color: #fff;
   padding-left: 10px;
 }
 
-.main-box-login .wrapper-content-login div input[type="text"]::-webkit-input-placeholder, .main-box-login .wrapper-content-login div input[type="password"]::-webkit-input-placeholder, .main-box-login .wrapper-content-login div input[type="email"]::-webkit-input-placeholder {
+.main-box-login .wrapper-content-login div input[type="text"]::-webkit-input-placeholder, .main-box-login .wrapper-content-login div input[type="password"]::-webkit-input-placeholder, .main-box-login .wrapper-content-login div input[type="email"]::-webkit-input-placeholder, .main-box-login .wrapper-content-login div input[type="number"]::-webkit-input-placeholder {
   color: #fff;
 }
 
-.main-box-login .wrapper-content-login div input[type="text"]:-moz-placeholder, .main-box-login .wrapper-content-login div input[type="password"]:-moz-placeholder, .main-box-login .wrapper-content-login div input[type="email"]:-moz-placeholder {
+.main-box-login .wrapper-content-login div input[type="text"]:-moz-placeholder, .main-box-login .wrapper-content-login div input[type="password"]:-moz-placeholder, .main-box-login .wrapper-content-login div input[type="email"]:-moz-placeholder, .main-box-login .wrapper-content-login div input[type="number"]:-moz-placeholder {
   color: #fff;
 }
 
-.main-box-login .wrapper-content-login div input[type="text"]::-moz-placeholder, .main-box-login .wrapper-content-login div input[type="password"]::-moz-placeholder, .main-box-login .wrapper-content-login div input[type="email"]::-moz-placeholder {
+.main-box-login .wrapper-content-login div input[type="text"]::-moz-placeholder, .main-box-login .wrapper-content-login div input[type="password"]::-moz-placeholder, .main-box-login .wrapper-content-login div input[type="email"]::-moz-placeholder, .main-box-login .wrapper-content-login div input[type="number"]::-moz-placeholder {
   color: #fff;
 }
 
-.main-box-login .wrapper-content-login div input[type="text"]:-ms-input-placeholder, .main-box-login .wrapper-content-login div input[type="password"]:-ms-input-placeholder, .main-box-login .wrapper-content-login div input[type="email"]:-ms-input-placeholder {
+.main-box-login .wrapper-content-login div input[type="text"]:-ms-input-placeholder, .main-box-login .wrapper-content-login div input[type="password"]:-ms-input-placeholder, .main-box-login .wrapper-content-login div input[type="email"]:-ms-input-placeholder, .main-box-login .wrapper-content-login div input[type="number"]:-ms-input-placeholder {
   color: #fff;
-}
-
-.main-box-login .wrapper-content-login div input[type="text"]:nth-child(1), .main-box-login .wrapper-content-login div input[type="email"]:nth-child(1) {
-  margin-top: 30px;
 }
 
 .main-box-login .wrapper-content-login div div a {
