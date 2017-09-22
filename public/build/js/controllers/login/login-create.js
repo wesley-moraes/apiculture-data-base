@@ -10,5 +10,6 @@ loginCreate.$inject = [
 function loginCreate(
     $scope
 ){
-    alert('teste JS');
+    //alert('Login Create');
+    $scope.namePerson = "28 Weeks Later";
 }

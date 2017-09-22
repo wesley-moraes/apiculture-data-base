@@ -1,11 +1,233 @@
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  cursor: pointer;
+  display: block;
+  width: 8px;
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
 }
 
-h1 {
-  color: red;
+a, button, input {
+  outline: none;
+  text-decoration: none;
 }
 
-h1 a {
-  color: blue;
+a:hover, button:hover, input:hover {
+  outline: none;
+}
+
+a:click, button:click, input:click {
+  outline: none;
+}
+
+a:active, button:active, input:active {
+  outline: none;
+}
+
+input[type="email"], input[type="text"], input[type="password"], input[type="button"], input[type="number"] {
+  background-color: transparent;
+}
+
+input[type="email"], input[type="text"], input[type="password"], input[type="button"], input[type="number"] {
+  border: 0px;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.content-aling-center {
+  margin: 0 auto;
+  display: table;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.hexagono {
+  position: relative;
+  top: -28px;
+  display: block;
+  background-color: #c23500;
+  width: 120px;
+  height: 69.76744px;
+  z-index: 9;
+  transform: rotate(-26deg);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.hexagono:hover {
+  background-color: #ff4600;
+  transform: rotate(-264deg);
+}
+
+.hexagono::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  transform: rotate(60deg);
+  background-color: inherit;
+}
+
+.hexagono::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0px;
+  width: inherit;
+  height: inherit;
+  transform: rotate(-60deg);
+  background-color: inherit;
+}
+
+/****************/
+/*** APP CSS***/
+/****************/
+.background-img {
+  background-image: url(../images/hexagonos.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.customButtonApp {
+  height: 30px;
+  border: 1px solid #ff4600;
+  text-align: center;
+}
+
+.main-box-login {
+  margin-top: 16.6%;
+  z-index: 0;
+  position: relative;
+  width: 39%;
+  background-color: #fb4500;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 10px 10px 30px -5px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 10px 10px 30px -5px rgba(0, 0, 0, 0.38);
+  box-shadow: 10px 10px 30px -5px rgba(0, 0, 0, 0.38);
+}
+
+.main-box-login .wrapper-content-login {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.main-box-login .wrapper-content-login div {
+  margin-bottom: 20px;
+}
+
+.main-box-login .wrapper-content-login div input[type="text"], .main-box-login .wrapper-content-login div input[type="password"], .main-box-login .wrapper-content-login div input[type="email"], .main-box-login .wrapper-content-login div input[type="number"] {
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.main-box-login .wrapper-content-login div input[type="text"]::-webkit-input-placeholder, .main-box-login .wrapper-content-login div input[type="password"]::-webkit-input-placeholder, .main-box-login .wrapper-content-login div input[type="email"]::-webkit-input-placeholder, .main-box-login .wrapper-content-login div input[type="number"]::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.main-box-login .wrapper-content-login div input[type="text"]:-moz-placeholder, .main-box-login .wrapper-content-login div input[type="password"]:-moz-placeholder, .main-box-login .wrapper-content-login div input[type="email"]:-moz-placeholder, .main-box-login .wrapper-content-login div input[type="number"]:-moz-placeholder {
+  color: #fff;
+}
+
+.main-box-login .wrapper-content-login div input[type="text"]::-moz-placeholder, .main-box-login .wrapper-content-login div input[type="password"]::-moz-placeholder, .main-box-login .wrapper-content-login div input[type="email"]::-moz-placeholder, .main-box-login .wrapper-content-login div input[type="number"]::-moz-placeholder {
+  color: #fff;
+}
+
+.main-box-login .wrapper-content-login div input[type="text"]:-ms-input-placeholder, .main-box-login .wrapper-content-login div input[type="password"]:-ms-input-placeholder, .main-box-login .wrapper-content-login div input[type="email"]:-ms-input-placeholder, .main-box-login .wrapper-content-login div input[type="number"]:-ms-input-placeholder {
+  color: #fff;
+}
+
+.main-box-login .wrapper-content-login div div a {
+  color: #ffde00;
+  margin-bottom: 30px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.main-box-login .wrapper-content-login div div a:hover {
+  color: #fff;
+}
+
+.main-box-login .wrapper-content-login img {
+  position: absolute;
+}
+
+.main-box-login .wrapper-content-login img:nth-child(1) {
+  left: 2px;
+  top: 2px;
+}
+
+.main-box-login .wrapper-content-login img:nth-child(2) {
+  left: 2px;
+  bottom: 2px;
+}
+
+.main-box-login .wrapper-content-login img:nth-child(3) {
+  right: 2px;
+  bottom: 2px;
+}
+
+.main-box-login .wrapper-content-login .customButtonIndex {
+  height: 32px;
+  border: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.main-box-login .wrapper-content-login .customButtonIndex:hover {
+  background-color: #fff;
+  color: #fb4500;
+  cursor: pointer;
 }

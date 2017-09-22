@@ -2,6 +2,7 @@
 <html lang="en" ng-app="myBeeApp">
 <head >
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Apiculture DataBase</title>
 
     <!-- CSS -->
@@ -14,17 +15,16 @@
     <script type="text/javascript" src="../app.js"></script>
 
     <!--Controllers-->
-    <script type="text/javascript" src="../js/controllers/login/login-create.js"></script>
+    <script type="text/javascript" src="../js/controllers/login/login.js"></script>
+    <script type="text/javascript" src="../js/controllers/configuration/configuration.js"></script>
+    <script type="text/javascript" src="../js/controllers/singup/singup.js"></script>
+    <script type="text/javascript" src="../js/controllers/recovery-password/recovery-password.js"></script>
+
+
 
 <!--    <base href="/">-->
 </head>
-<body>
-    <h1>Working?</h1>
-    <a href="#!/login">login</a>
-    <a href="#!/configuration">Configurações</a>
-    <a href="#!/singup">CADASTRE-SE</a>
-    <a href="#!/recovery-password">ESQUECI MINHA SENHA</a>
-<!--    <a href="#!/"></a>-->
+<body class="background-img">
     <main ng-view></main>
 </body>
 </html>

@@ -1,9 +1,244 @@
+//Variables
+$w100 : 100%;
+$w50 : 50%;
+$w30 : 30%;
+
+$darkest-orange : #c23500;
+$dark-orange : #fb4500;
+$text-orange: #ff4600; //Also for the lines
+$light-orange: #ff8c1b;
+$text-yellow-green: #d8ff01; //The links
+$text-white: #fff;
+$colorWhite: #fff;
+$text-yellow-link: #ffde00;
+
+
+//My reset
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    cursor:pointer;
+    display:block;
+    width:8px;
+    color: #333;
+    text-align:center;
+    position:relative;
+}
+input[type=number] {
+   -moz-appearance: textfield;
+   appearance: textfield;
+   margin: 0;
+}
 *{
     box-sizing: border-box;
 }
-h1{
-    color: red;
-    a{
-        color: blue;
+a, button, input{
+    outline: none;
+    text-decoration: none;
+    &:hover{
+        outline: none;
     }
+    &:click{
+        outline: none;
+    }
+    &:active{
+        outline: none;
+    }
+}
+input[type="email"], input[type="text"], input[type="password"], input[type="button"], input[type="number"]{
+    background-color: transparent;
+}
+input[type="email"], input[type="text"], input[type="password"], input[type="button"], input[type="number"]{
+    border: 0px;
+}
+html{
+    height: $w100;
+    width: $w100;
+}
+body{
+    width: $w100;
+    height: $w100;
+}
+
+//Presets
+.w-100{width: $w100}
+.w-50{width:  $w50}
+.w-30{width: $w30}
+.content-aling-center{
+    margin: 0 auto;
+    display: table;
+}
+.text-align-center{
+    text-align: center;
+}
+.f-left{
+    float: left;
+}
+.f-right{
+    float: right;
+}
+
+//Mixins
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box; // stops bg color from leaking outside the border:
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//css transition and animation
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+//Fonts
+//@mixin font-montserratmedium($font-size, $margin, $color){
+//    font-family: 'montserratmedium';
+//    font-size: $font-size;
+//    color: $color;
+//    text-align: center;
+//    margin: $margin;
+//}
+
+//Hexagono
+$hw : 120; //to keep the propotion
+$wh : ((50*$hw)/86)*1px; //to keep the propotion
+.hexagono{
+  position: relative;
+  top: -28px;
+  display: block;
+  background-color: $darkest-orange;
+  width: $hw*1px;
+  height: $wh;
+  z-index: 9;
+    transform: rotate(-26deg);
+    @include prefix(transition, all .5s, webkit moz);
+  &:hover{
+    background-color: $text-orange;
+    transform: rotate(-264deg);
+  }
+  &::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: inherit;
+    height: inherit;
+    transform: rotate(60deg);
+    background-color: inherit;
+  }
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    width: inherit;
+    height: inherit;
+    transform: rotate(-60deg);
+    background-color: inherit;
+  }
+}
+
+
+/****************/
+/*** APP CSS***/
+/****************/
+.background-img{
+    background-image: url(../images/hexagonos.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.customButtonApp{
+    height: 30px;
+    border: 1px solid $text-orange;
+    text-align: center;
+}
+.main-box-login{
+    margin-top: 16.6%;
+    z-index: 0;
+    position: relative;
+    width: 39%;
+    background-color: $dark-orange;
+    @include border-radius(7px);
+    -webkit-box-shadow: 10px 10px 30px -5px rgba(0,0,0,0.38);
+    -moz-box-shadow: 10px 10px 30px -5px rgba(0,0,0,0.38);
+    box-shadow: 10px 10px 30px -5px rgba(0,0,0,0.38);
+    .wrapper-content-login{
+        padding-left: 20%;
+        padding-right: 20%;
+        div{
+            margin-bottom: 20px;
+            input[type="text"], input[type="password"], input[type="email"], input[type="number"]{
+                border-bottom: 1px solid $text-white;
+                width: 100%;
+                color: $text-white;
+                padding-left: 10px;
+                @include placeholder{
+                    color: $text-white;
+                }
+            }
+            div > input[type="text"]:nth-child(1), div > input[type="email"]:nth-child(1){
+               // margin-top: 30px;
+            }
+            div a{
+                color: $text-yellow-link;
+                margin-bottom: 30px;
+                @include prefix(transition, all .4s, webkit moz);
+                &:hover{
+                    color: $text-white;
+                }
+            }
+        }
+        img{
+            position: absolute;
+        }
+        img:nth-child(1){
+            left: 2px;
+            top: 2px;
+        }
+        img:nth-child(2){
+            left: 2px;
+            bottom: 2px;
+        }
+        img:nth-child(3){
+            right: 2px;
+            bottom: 2px;
+        }
+        .customButtonIndex{
+            height: 32px;
+            border: 2px solid $colorWhite;
+            text-align: center;
+            color: $text-white;
+            @include prefix(transition, all .4s, webkit moz);
+            &:hover{
+                background-color: $colorWhite;
+                color: $dark-orange;
+                cursor: pointer;
+            }
+        }
+
+    }//wrapper-content-login
 }
