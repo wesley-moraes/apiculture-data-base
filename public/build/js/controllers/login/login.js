@@ -9,6 +9,12 @@ login.$inject = [
 function login(
     $scope
 ){
-    //alert('Login Create');
-    //$scope.namePerson = "28 Weeks Later";
+
+    //password show or hide
+    $scope.showPassword = false;
+    $scope.toggleShowPassword = function(){
+        $scope.showPassword = !$scope.showPassword;
+    }
 }
+
+

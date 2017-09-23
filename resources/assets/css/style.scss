@@ -189,6 +189,15 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
     .wrapper-content-login{
         padding-left: 20%;
         padding-right: 20%;
+        p{
+            color: $text-white;
+            margin-bottom: 20px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        div > div:nth-child(1) input{
+            margin-top: 30px;
+        }
         div{
             margin-bottom: 20px;
             input[type="text"], input[type="password"], input[type="email"], input[type="number"]{
@@ -200,10 +209,15 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
                     color: $text-white;
                 }
             }
-            div > input[type="text"]:nth-child(1), div > input[type="email"]:nth-child(1){
-               // margin-top: 30px;
+            i{
+                cursor: pointer;
+                color: $text-white;
+                position: relative;
+                float: right;
+                top: -20px;
+                right: 10px;
             }
-            div a{
+            a{
                 color: $text-yellow-link;
                 margin-bottom: 30px;
                 @include prefix(transition, all .4s, webkit moz);
