@@ -76,6 +76,16 @@ body{
 .f-right{
     float: right;
 }
+.display-none{
+    display: none;
+}
+.display-block{
+    display: block;
+}
+.blue{
+    background-color: blue !important;
+    color: blue !important;
+}
 
 //Mixins
 @mixin border-radius($radius){
@@ -255,4 +265,20 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
         }
 
     }//wrapper-content-login
+}
+
+//menu
+.menu{
+    height: 316px;
+    background-color: pink;
+    .trapeze{
+        width: 70%;
+        border-top: 316px solid blue;
+        border-right: 375px solid transparent;
+        height: 100%;
+        z-index: 1;
+    }
+    nav{
+        z-index: 9;
+    }
 }

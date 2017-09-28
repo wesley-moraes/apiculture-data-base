@@ -82,6 +82,19 @@ body {
   float: right;
 }
 
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.blue {
+  background-color: blue !important;
+  color: blue !important;
+}
+
 .hexagono {
   position: relative;
   top: -28px;
@@ -250,4 +263,21 @@ body {
   background-color: #fff;
   color: #fb4500;
   cursor: pointer;
+}
+
+.menu {
+  height: 316px;
+  background-color: pink;
+}
+
+.menu .trapeze {
+  width: 70%;
+  border-top: 316px solid blue;
+  border-right: 375px solid transparent;
+  height: 100%;
+  z-index: 1;
+}
+
+.menu nav {
+  z-index: 9;
 }
