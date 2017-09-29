@@ -270,15 +270,50 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
 //menu
 .menu{
     height: 316px;
-    background-color: pink;
+    background-image: url(../images/abelha.jpg);
+    background-size: 53% 100%;
+    background-position-x: 650px;
+    background-repeat: no-repeat;
     .trapeze{
-        width: 70%;
-        border-top: 316px solid blue;
-        border-right: 375px solid transparent;
+        width: 66%;
+        border-top: 316px solid $dark-orange;
+        border-right: 240px solid transparent;
         height: 100%;
-        z-index: 1;
+        float: left;
+        position: relative;
+        z-index: 5;
     }
-    nav{
-        z-index: 9;
-    }
+    .wrapper-content-menu{
+        position: absolute;
+        left: 188px;
+        top: 50px;
+        z-index: 6;
+        .title{
+            margin-bottom: 140px;
+            h3{
+                color: $text-white;
+                font-size: 22px;
+            }
+        }
+    }//wrapper-content-menu
+}
+
+//app container
+.app-container{
+    width: 73.20%;
+    margin: 0 auto;
+//    background-color: yellow;
+    position: relative;
+    top: -40px;
+    z-index: 7;
+}
+
+.box-preset{
+    border: 1px solid #d4d100;
+    -webkit-box-shadow: 10px 10px 18px -4px rgba(0,0,0,0.41);
+    -moz-box-shadow: 10px 10px 18px -4px rgba(0,0,0,0.41);
+    box-shadow: 10px 10px 18px -4px rgba(0,0,0,0.41);
+}
+.medium-box{
+    width: 49%;
 }
