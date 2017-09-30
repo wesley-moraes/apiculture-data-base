@@ -23,6 +23,10 @@ myBeeApp.config(['$routeProvider', '$locationProvider', function($routeProvider,
             templateUrl: 'home/home.html',
             controller: 'home'
         })
+        .when('/consult', {
+            templateUrl: 'consult/consult.html',
+            controller: 'consult'
+        })
         .when('/add', {
             templateUrl: 'add/add.html',
 //            controller: 'singup'

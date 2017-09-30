@@ -13,4 +13,9 @@ gulp.task('copy-fonts', function(){
         .src(config.vendor_path_font)
         .pipe(gulp.dest(config.build_vendor_path_font))
         .pipe(liveReload());
+
+    gulp
+        .src(config.assets_path + '/font/*.*')
+        .pipe(gulp.dest(config.build_path_font))
+        .pipe(liveReload());
 });

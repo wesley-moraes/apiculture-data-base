@@ -16,6 +16,11 @@ gulp.task('copy-styles', function(){
         .pipe(gulp.dest(config.build_vendor_path_css))
         .pipe(liveReload());
 
+    gulp
+        .src(config.assets_path + '/css/*.css')
+        .pipe(gulp.dest(config.build_vendor_path_css))
+        .pipe(liveReload()); //fonts
+
     return gulp
         .src([
             config.assets_path + '/css/**/*.scss'
