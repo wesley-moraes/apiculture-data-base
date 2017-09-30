@@ -82,6 +82,19 @@ body {
   float: right;
 }
 
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.blue {
+  background-color: blue !important;
+  color: blue !important;
+}
+
 .hexagono {
   position: relative;
   top: -28px;
@@ -158,6 +171,17 @@ body {
   padding-right: 20%;
 }
 
+.main-box-login .wrapper-content-login p {
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.main-box-login .wrapper-content-login div > div:nth-child(1) input {
+  margin-top: 30px;
+}
+
 .main-box-login .wrapper-content-login div {
   margin-bottom: 20px;
 }
@@ -185,7 +209,16 @@ body {
   color: #fff;
 }
 
-.main-box-login .wrapper-content-login div div a {
+.main-box-login .wrapper-content-login div i {
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+  float: right;
+  top: -20px;
+  right: 10px;
+}
+
+.main-box-login .wrapper-content-login div a {
   color: #ffde00;
   margin-bottom: 30px;
   -webkit-transition: all 0.4s;
@@ -193,7 +226,7 @@ body {
   transition: all 0.4s;
 }
 
-.main-box-login .wrapper-content-login div div a:hover {
+.main-box-login .wrapper-content-login div a:hover {
   color: #fff;
 }
 
@@ -230,4 +263,65 @@ body {
   background-color: #fff;
   color: #fb4500;
   cursor: pointer;
+}
+
+.menu {
+  height: 316px;
+  background-image: url(../images/abelha.jpg);
+  background-size: 53% 100%;
+  background-position-x: 650px;
+  background-repeat: no-repeat;
+}
+
+.menu .trapeze {
+  width: 66%;
+  border-top: 316px solid #fb4500;
+  border-right: 240px solid transparent;
+  height: 100%;
+  float: left;
+  position: relative;
+  z-index: 5;
+}
+
+.menu .wrapper-content-menu {
+  position: absolute;
+  left: 183px;
+  top: 50px;
+  z-index: 6;
+}
+
+.menu .wrapper-content-menu .title {
+  margin-bottom: 140px;
+}
+
+.menu .wrapper-content-menu .title h3 {
+  color: #fff;
+  font-size: 22px;
+}
+
+.app-container {
+  width: 73.20%;
+  margin: 0 auto;
+  position: relative;
+  top: -40px;
+  z-index: 7;
+  color: #ff4600;
+}
+
+.box-preset {
+  border: 1px solid #d4d100;
+  background-color: #fff;
+  -webkit-box-shadow: 6px 5px 8px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 6px 5px 8px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 6px 5px 8px 0px rgba(0, 0, 0, 0.38);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.medium-box {
+  width: 49%;
+}
+
+.default-mb {
+  margin-bottom: 20px;
 }

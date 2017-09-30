@@ -11,10 +11,6 @@ myBeeApp.config(['$routeProvider', '$locationProvider', function($routeProvider,
             templateUrl: 'login/login.html',
             controller: 'login'
         })
-        .when('/configuration', {
-            templateUrl: 'configuration/configuration.html',
-            controller: 'configuration'
-        })
         .when('/singup', {
             templateUrl: 'singup/singup.html',
             controller: 'singup'
@@ -22,6 +18,22 @@ myBeeApp.config(['$routeProvider', '$locationProvider', function($routeProvider,
         .when('/recovery-password', {
             templateUrl: 'recovery-password/recovery-password.html',
             controller: 'recoveryPassword'
+        })
+        .when('/home', {
+            templateUrl: 'home/home.html',
+            controller: 'home'
+        })
+        .when('/consult', {
+            templateUrl: 'consult/consult.html',
+            controller: 'consult'
+        })
+        .when('/add', {
+            templateUrl: 'add/add.html',
+//            controller: 'singup'
+        })
+        .when('/configuration', {
+            templateUrl: 'configuration/configuration.html',
+            controller: 'configuration'
         })
         .otherwise({
             redirectTo: '/login'

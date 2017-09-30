@@ -76,6 +76,16 @@ body{
 .f-right{
     float: right;
 }
+.display-none{
+    display: none;
+}
+.display-block{
+    display: block;
+}
+.blue{
+    background-color: blue !important;
+    color: blue !important;
+}
 
 //Mixins
 @mixin border-radius($radius){
@@ -189,6 +199,15 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
     .wrapper-content-login{
         padding-left: 20%;
         padding-right: 20%;
+        p{
+            color: $text-white;
+            margin-bottom: 20px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        div > div:nth-child(1) input{
+            margin-top: 30px;
+        }
         div{
             margin-bottom: 20px;
             input[type="text"], input[type="password"], input[type="email"], input[type="number"]{
@@ -200,10 +219,15 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
                     color: $text-white;
                 }
             }
-            div > input[type="text"]:nth-child(1), div > input[type="email"]:nth-child(1){
-               // margin-top: 30px;
+            i{
+                cursor: pointer;
+                color: $text-white;
+                position: relative;
+                float: right;
+                top: -20px;
+                right: 10px;
             }
-            div a{
+            a{
                 color: $text-yellow-link;
                 margin-bottom: 30px;
                 @include prefix(transition, all .4s, webkit moz);
@@ -241,4 +265,62 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
         }
 
     }//wrapper-content-login
+}
+
+//menu
+.menu{
+    height: 316px;
+    background-image: url(../images/abelha.jpg);
+    background-size: 53% 100%;
+    background-position-x: 650px;
+    background-repeat: no-repeat;
+    .trapeze{
+        width: 66%;
+        border-top: 316px solid $dark-orange;
+        border-right: 240px solid transparent;
+        height: 100%;
+        float: left;
+        position: relative;
+        z-index: 5;
+    }
+    .wrapper-content-menu{
+        position: absolute;
+        left: 183px;
+        top: 50px;
+        z-index: 6;
+        .title{
+            margin-bottom: 140px;
+            h3{
+                color: $text-white;
+                font-size: 22px;
+            }
+        }
+    }//wrapper-content-menu
+}
+
+//app container
+.app-container{
+    width: 73.20%;
+    margin: 0 auto;
+//    background-color: yellow;
+    position: relative;
+    top: -40px;
+    z-index: 7;
+    color: $text-orange;
+}
+
+.box-preset{
+    border: 1px solid #d4d100;
+    background-color: $colorWhite;
+    -webkit-box-shadow: 6px 5px 8px 0px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 6px 5px 8px 0px rgba(0, 0, 0, 0.38);
+    box-shadow: 6px 5px 8px 0px rgba(0, 0, 0, 0.38);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.medium-box{
+    width: 49%;
+}
+.default-mb{ //default margin bottom
+    margin-bottom: 20px;
 }

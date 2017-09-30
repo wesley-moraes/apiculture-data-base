@@ -28,17 +28,25 @@
 </div>
 <div>
     <input
-        type="password"
+        ng-attr-type="{{showPassword ? 'text' : 'password'}}"
         ng-model="password"
-        placeholder="Senha"
+        placeholder="senha"
     />
+    <i
+        ng-click="toggleShowPassword()"
+        ng-class="{'fa fa-eye-slash' : showPassword, 'fa fa-eye': !showPassword}"
+        style="cursor: pointer"></i>
 </div>
 <div>
     <input
-        type="password"
-        ng-model="passwordRepeat"
-        placeholder="Repetir a senha"
+        ng-attr-type="{{showRepeatPassword ? 'text' : 'password'}}"
+        ng-model="repeatPassword"
+        placeholder="Repetir senha"
     />
+    <i
+        ng-click="toggleShowRepeatPassword()"
+        ng-class="{'fa fa-eye-slash' : showRepeatPassword, 'fa fa-eye': !showRepeatPassword}"
+        style="cursor: pointer"></i>
 </div>
 <div>
     <input

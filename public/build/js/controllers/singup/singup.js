@@ -9,5 +9,14 @@ singup.$inject = [
 function singup(
     $scope
 ){
-        $scope.singupMessage = "Inscreva-se"
+    //password show or hide
+    $scope.showPassword = false;
+    $scope.toggleShowPassword = function(){
+        $scope.showPassword = !$scope.showPassword;
+    }
+
+    $scope.showRepeatPassword = false;
+    $scope.toggleShowRepeatPassword = function(){
+        $scope.showRepeatPassword = !$scope.showRepeatPassword;
+    }
 }
