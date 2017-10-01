@@ -296,16 +296,81 @@ body {
 
 .menu .wrapper-content-menu .title h3 {
   color: #fff;
-  font-size: 22px;
+  font-size: 20px;
+  font-family: 'Helvetica';
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.menu .wrapper-content-menu nav ul li a {
+  margin-right: 15px;
+  color: #fff;
+  font-family: 'Helvetica-Extended-Light';
+}
+
+.menu .wrapper-content-menu nav ul li a:hover {
+  color: #d8ff01;
 }
 
 .app-container {
   width: 73.20%;
   margin: 0 auto;
   position: relative;
-  top: -40px;
+  top: -50px;
   z-index: 7;
   color: #ff4600;
+  font-family: 'Helvetica-Extended-Light';
+}
+
+.app-container .info-user-header {
+  height: 40px;
+  line-height: 40px;
+}
+
+.app-container .info-user-header span.bold-info {
+  font-weight: bold;
+}
+
+.app-container .custom-info-box-1 {
+  color: #fff;
+}
+
+.app-container .custom-info-box-1 div div:nth-child(1) {
+  height: 80px;
+  background-color: #c6430b;
+  padding-left: 40px;
+  line-height: 80px;
+  font-size: 30px;
+  font-family: HelveticaNeue;
+}
+
+.app-container .custom-info-box-1 div div:nth-child(1) i {
+  font-size: 40px;
+  line-height: 84px;
+  margin-right: 40px;
+}
+
+.app-container .custom-info-box-1 div div:nth-child(2) {
+  height: 125px;
+  background-color: #f26223;
+  padding-left: 40px;
+  line-height: 125px;
+}
+
+.app-container .custom-info-box-1 div div:nth-child(2) p:nth-child(1).number {
+  font-size: 100px;
+  font-family: HelveticaNeue;
+}
+
+.app-container .custom-info-box-1 div div:nth-child(2) p:nth-child(2) {
+  font-size: 60px;
+  margin-left: 20px;
+  font-family: HelveticaNeue;
+}
+
+.app-container .custom-info-box-1 div div:nth-child(2) p:nth-child(1) {
+  font-size: 60px;
+  font-family: HelveticaNeue;
 }
 
 .box-preset {
@@ -324,4 +389,9 @@ body {
 
 .default-mb {
   margin-bottom: 20px;
+}
+
+.no-padding-20 {
+  padding-left: 0;
+  padding-right: 0;
 }

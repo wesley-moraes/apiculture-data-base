@@ -5,6 +5,8 @@ $w30 : 30%;
 
 $darkest-orange : #c23500;
 $dark-orange : #fb4500;
+$dark-orange-box: #f26223; //custom box 1
+$dark-orange-title: #c6430b; //custom box 1
 $text-orange: #ff4600; //Also for the lines
 $light-orange: #ff8c1b;
 $text-yellow-green: #d8ff01; //The links
@@ -292,8 +294,21 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
             margin-bottom: 140px;
             h3{
                 color: $text-white;
-                font-size: 22px;
+                font-size: 20px;
+                font-family: 'Helvetica';
+                font-weight: bolder;
+                margin-bottom: 10px;
             }
+        }
+        nav ul li{
+                        a{
+                            margin-right: 15px;
+                            color: $text-white;
+                            font-family: 'Helvetica-Extended-Light';
+                            &:hover{
+                                color: $text-yellow-green;
+                            }
+                        }
         }
     }//wrapper-content-menu
 }
@@ -304,9 +319,54 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
     margin: 0 auto;
 //    background-color: yellow;
     position: relative;
-    top: -40px;
+    top: -50px;
     z-index: 7;
     color: $text-orange;
+    font-family: 'Helvetica-Extended-Light';
+    .info-user-header{
+        height: 40px;
+        line-height: 40px;
+        span.bold-info{
+            font-weight: bold;
+        }
+    }
+    .custom-info-box-1{//Differents boxes
+        color: $text-white;
+        div{
+            div:nth-child(1){
+                height: 80px;
+                background-color: $dark-orange-title;
+                padding-left: 40px;
+                line-height: 80px;
+                font-size: 30px;
+                font-family: HelveticaNeue;
+                i{
+                    font-size: 40px;
+                    line-height: 84px;
+                    margin-right: 40px;
+                }
+            }
+            div:nth-child(2){
+                height: 125px;
+                background-color:  $dark-orange-box;
+                padding-left: 40px;
+                line-height: 125px;
+                p:nth-child(1).number{
+                    font-size: 100px;
+                    font-family: HelveticaNeue;
+                }
+                p:nth-child(2){
+                    font-size: 60px;
+                    margin-left: 20px;
+                    font-family: HelveticaNeue;
+                }
+                p:nth-child(1){
+                    font-size: 60px;
+                    font-family: HelveticaNeue;
+                }
+            }
+        }
+    }
 }
 
 .box-preset{
@@ -323,4 +383,8 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
 }
 .default-mb{ //default margin bottom
     margin-bottom: 20px;
+}
+.no-padding-20{
+    padding-left: 0;
+    padding-right: 0;
 }
