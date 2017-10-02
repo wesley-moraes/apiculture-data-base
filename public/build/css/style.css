@@ -373,6 +373,64 @@ body {
   font-family: HelveticaNeue;
 }
 
+.app-container .wrapper-content-infos
+.list-info:nth-child(1) {
+  margin-top: 15px;
+}
+
+.app-container .list-info {
+  margin-top: 8px;
+  float: left;
+  width: 100%;
+}
+
+.app-container .list-info p {
+  font-family: 'Futura-Normal';
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 2px solid #ff4600;
+  margin-bottom: 10px;
+}
+
+.app-container .list-info div.wrapper-left-infos {
+  width: 71.42%;
+}
+
+.app-container .list-info div.wrapper-left-infos div:nth-child(1) {
+  margin-right: 8px;
+}
+
+.app-container .list-info div.wrapper-left-infos div:nth-child(1) ul li {
+  margin-bottom: 10px;
+}
+
+.app-container .list-info div.wrapper-left-infos div:nth-child(2) ul li {
+  margin-bottom: 10px;
+}
+
+.app-container .list-info div.wrapper-right-img {
+  width: 28.57%;
+  height: 106px;
+}
+
+.app-container .list-info div.wrapper-right-img div {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-clip: padding-box;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.app-container .list-info div.wrapper-right-img div img {
+  width: 100%;
+  height: 100%;
+}
+
 .box-preset {
   border: 1px solid #d4d100;
   background-color: #fff;
