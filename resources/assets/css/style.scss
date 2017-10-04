@@ -367,7 +367,17 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
             }
         }
     }//custom-info-box ~ different boxes
-    .wrapper-content-infos
+    .wrapper-content-infos.add-page{
+        .box-input-1{ //This name to refer a specific configuration
+            width: 79.16%;
+            background-color: aqua;
+        }
+        .box-input-1 + div.f-right{
+            background-color: cornflowerblue;
+            width: 20.83%;
+        }
+    }
+    .wrapper-content-infos //add, consult!
     .list-info:nth-child(1){margin-top: 15px;}
     .list-info{
         margin-top: 8px;
@@ -411,7 +421,7 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
                     }
                 }
             }
-    }
+    }//list info
 
 }//app-container
 

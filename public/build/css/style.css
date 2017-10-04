@@ -373,6 +373,16 @@ body {
   font-family: HelveticaNeue;
 }
 
+.app-container .wrapper-content-infos.add-page .box-input-1 {
+  width: 79.16%;
+  background-color: aqua;
+}
+
+.app-container .wrapper-content-infos.add-page .box-input-1 + div.f-right {
+  background-color: cornflowerblue;
+  width: 20.83%;
+}
+
 .app-container .wrapper-content-infos
 .list-info:nth-child(1) {
   margin-top: 15px;
