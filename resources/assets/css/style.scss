@@ -14,6 +14,50 @@ $text-white: #fff;
 $colorWhite: #fff;
 $text-yellow-link: #ffde00;
 
+//Mixins
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box; // stops bg color from leaking outside the border:
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//css transition and animation
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+//Fonts
+//@mixin font-montserratmedium($font-size, $margin, $color){
+//    font-family: 'montserratmedium';
+//    font-size: $font-size;
+//    color: $color;
+//    text-align: center;
+//    margin: $margin;
+//}
 
 //My reset
 input[type=number]::-webkit-inner-spin-button {
@@ -88,51 +132,31 @@ body{
     background-color: blue !important;
     color: blue !important;
 }
-
-//Mixins
-@mixin border-radius($radius){
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    border-radius: $radius;
-    background-clip: padding-box; // stops bg color from leaking outside the border:
-}
-
-@mixin clearfix() {
-    &:before,
-    &:after {
-        content: "";
+//buttons
+.btn-default-01{
+    width: 49%;
+    height: 50px;
+    a{
+        border: 1px solid $text-orange;
+        font-family: 'Helvetica-Extended-Light';
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $text-orange;
+        line-height: 50px;
         display: table;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        @include prefix(transition, all .5s, webkit moz);
+        &:hover{
+            background-color: $text-orange;
+            color: $text-white;
+            border: 1px solid $colorWhite;
+        }
     }
-    &:after {
-        clear: both;
-    }
 }
 
-//css transition and animation
-@mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    #{'-' + $prefix + '-' + $property}: $value;
-  }
 
-  // Output standard non-prefixed declaration
-  #{$property}: $value;
-}
-
-@mixin placeholder {
-  &::-webkit-input-placeholder {@content}
-  &:-moz-placeholder           {@content}
-  &::-moz-placeholder          {@content}
-  &:-ms-input-placeholder      {@content}
-}
-
-//Fonts
-//@mixin font-montserratmedium($font-size, $margin, $color){
-//    font-family: 'montserratmedium';
-//    font-size: $font-size;
-//    color: $color;
-//    text-align: center;
-//    margin: $margin;
-//}
 
 //Hexagono
 $hw : 120; //to keep the propotion
@@ -370,59 +394,89 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
     .wrapper-content-infos.add-page{
         .box-input-1{ //This name to refer a specific configuration
             width: 79.16%;
-            background-color: aqua;
         }
         .box-input-1 + div.f-right{
-            background-color: cornflowerblue;
             width: 20.83%;
         }
     }
-    .wrapper-content-infos //add, consult!
-    .list-info:nth-child(1){margin-top: 15px;}
-    .list-info{
-        margin-top: 8px;
-        float: left;
-        width: 100%;
-            p{
-                font-family: 'Futura-Normal';
-                text-transform: uppercase;
-                font-size: 16px;
-                font-weight: bold;
-                border-bottom: 2px solid $text-orange;
-                margin-bottom: 10px;
-            }
-            div.wrapper-left-infos{
-                width: 71.42%;
-                div:nth-child(1){
-                    margin-right: 8px;
-                    ul li{
-                        margin-bottom: 10px;
+    .wrapper-content-infos{ //add, consult!
+        .list-info:nth-child(1){margin-top: 15px;}
+        .list-info{
+            margin-top: 8px;
+            float: left;
+            width: 100%;
+                p{
+                    font-family: 'Futura-Normal';
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    font-weight: bold;
+                    border-bottom: 2px solid $text-orange;
+                    margin-bottom: 10px;
+                }
+                div.wrapper-left-infos{
+                    width: 71.42%;
+                    div:nth-child(1){
+                        margin-right: 8px;
+                        ul li{
+                            margin-bottom: 10px;
+                        }
+                    }
+                    div:nth-child(2){
+                        ul li{
+                            margin-bottom: 10px;
+                        }
                     }
                 }
-                div:nth-child(2){
-                    ul li{
-                        margin-bottom: 10px;
+                div.wrapper-right-img{
+                    width: 28.57%;
+                    height: 106px;
+                    div{
+                        width: 84px;
+                        height: 84px;
+                        margin: 0 auto;
+                        @include border-radius(50%);
+                        overflow: hidden;
+                        margin-top: 10px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
                 }
-            }
-            div.wrapper-right-img{
-                width: 28.57%;
-                height: 106px;
-                div{
-                    width: 84px;
-                    height: 84px;
-                    margin: 0 auto;
-                    @include border-radius(50%);
-                    overflow: hidden;
-                    margin-top: 10px;
-                    img{
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-            }
+        }
     }//list info
-
+    .wrapper-content-infos.wrapper-inputs{ //inputs, add, consult
+        .box-input-1{
+            div{
+                border-bottom: 1px solid $text-orange;
+                margin-bottom: 25px;
+                margin-top: 30px;
+                width: 100%;
+                label{
+                    float: left;
+                    color: $text-orange;
+                    width: 160px;
+                    margin-left: 15px;
+                    height: 20px;
+                    line-height: 20px;
+                }
+                input[type="text"]{
+                    border-left: 1px solid $text-orange;
+                    color: $text-orange;
+                    height: 20px;
+                    padding-left: 15px;
+                    @include placeholder{
+                        color: $text-orange;
+                    }
+                }
+            }
+        }//box-input-1
+    }
+    .wrapper-content-infos.default-infos{
+        .box-input-1{
+            width: 100%;
+        }
+    }
 }//app-container
 
 .box-preset{

@@ -13,4 +13,5 @@ function home(
 ){
         //show menu
         $rootScope.changeDisplay = 'display-block';
+        $rootScope.backgroundImg = '';
 }
