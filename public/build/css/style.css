@@ -405,7 +405,31 @@ body {
 }
 
 .app-container .wrapper-content-infos.add-page .box-input-1 + div.f-right {
-  width: 20.83%;
+  width: 19.20%;
+  border: 1px solid #ff4600;
+  margin-top: 49px;
+  height: 207px;
+}
+
+.app-container .wrapper-content-infos.add-page .box-input-1 + div.f-right input[type="file"] {
+  display: none;
+}
+
+.app-container .wrapper-content-infos.add-page .box-input-1 + div.f-right label {
+  position: relative;
+  width: 100%;
+  top: 185px;
+  left: 50px;
+  font-size: 11px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.app-container .wrapper-content-infos.add-page .box-input-1 + div.f-right label:hover {
+  cursor: pointer;
+  font-size: 15px;
+  left: 35px;
 }
 
 .app-container .wrapper-content-infos .list-info:nth-child(1) {
@@ -425,10 +449,13 @@ body {
   font-weight: bold;
   border-bottom: 2px solid #ff4600;
   margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 10px;
 }
 
 .app-container .wrapper-content-infos .list-info div.wrapper-left-infos {
   width: 71.42%;
+  padding-left: 10px;
 }
 
 .app-container .wrapper-content-infos .list-info div.wrapper-left-infos div:nth-child(1) {
@@ -502,6 +529,38 @@ body {
 
 .app-container .wrapper-content-infos.wrapper-inputs .box-input-1 div input[type="text"]:-ms-input-placeholder {
   color: #ff4600;
+}
+
+.app-container .wrapper-content-infos.wrapper-inputs .box-input-1 textarea {
+  border: 1px solid transparent;
+  border-left: 1px solid #ff4600;
+  color: #ff4600;
+  height: 40px;
+  padding-left: 15px;
+  width: 76%;
+  margin-bottom: -3px;
+  padding: 0px;
+  padding-left: 10px;
+}
+
+.app-container .wrapper-content-infos.wrapper-inputs .box-input-1 textarea::-webkit-input-placeholder {
+  color: #ff4600;
+}
+
+.app-container .wrapper-content-infos.wrapper-inputs .box-input-1 textarea:-moz-placeholder {
+  color: #ff4600;
+}
+
+.app-container .wrapper-content-infos.wrapper-inputs .box-input-1 textarea::-moz-placeholder {
+  color: #ff4600;
+}
+
+.app-container .wrapper-content-infos.wrapper-inputs .box-input-1 textarea:-ms-input-placeholder {
+  color: #ff4600;
+}
+
+.app-container .wrapper-content-infos.wrapper-inputs .box-input-1 textarea:focus {
+  outline-color: transparent;
 }
 
 .app-container .wrapper-content-infos.default-infos .box-input-1 {

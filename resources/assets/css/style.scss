@@ -396,10 +396,29 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
             width: 79.16%;
         }
         .box-input-1 + div.f-right{
-            width: 20.83%;
+            width: 19.20%;
+            border: 1px solid $text-orange;
+            margin-top: 49px;
+            height: 207px;
+            input[type="file"]{
+                display: none;
+            }
+            label{
+                position: relative;
+                width: 100%;
+                top: 185px;
+                left: 50px;
+                font-size: 11px;
+                @include prefix(transition, all .5s, webkit moz);
+                &:hover{
+                    cursor: pointer;
+                    font-size: 15px;
+                    left: 35px;
+                }
+            }
         }
     }
-    .wrapper-content-infos{ //add, consult!
+    .wrapper-content-infos{ //consult!
         .list-info:nth-child(1){margin-top: 15px;}
         .list-info{
             margin-top: 8px;
@@ -412,9 +431,12 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
                     font-weight: bold;
                     border-bottom: 2px solid $text-orange;
                     margin-bottom: 10px;
+                    padding-left: 5px;
+                    padding-right: 10px;
                 }
                 div.wrapper-left-infos{
                     width: 71.42%;
+                    padding-left: 10px;
                     div:nth-child(1){
                         margin-right: 8px;
                         ul li{
@@ -468,6 +490,23 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
                     @include placeholder{
                         color: $text-orange;
                     }
+                }
+            }
+            textarea{
+                border: 1px solid transparent;
+                border-left: 1px solid $text-orange;
+                color: $text-orange;
+                height: 40px;
+                padding-left: 15px;
+                width: 76%;
+                margin-bottom: -3px;
+                padding: 0px;
+                padding-left: 10px;
+                @include placeholder{
+                    color: $text-orange;
+                }
+                &:focus{
+                    outline-color: transparent;
                 }
             }
         }//box-input-1

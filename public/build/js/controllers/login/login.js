@@ -29,5 +29,3 @@ function login(
         $window.location = '#!/home';
     }
 }
-
-
