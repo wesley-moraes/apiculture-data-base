@@ -12,7 +12,7 @@ function home(
     $scope,
     $rootScope
 ){
-        //show menu
+        //show menU
         $rootScope.changeDisplay = 'display-block';
         $rootScope.backgroundImg = '';
 
