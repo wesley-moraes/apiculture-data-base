@@ -568,6 +568,17 @@ body {
   width: 100%;
 }
 
+.app-container .wrapper-chart {
+  width: 50%;
+  float: left;
+}
+
+.app-container .wrapper-chart canvas {
+  float: left;
+  width: 100% !important;
+  height: 50% !important;
+}
+
 .box-preset {
   border: 1px solid #d4d100;
   background-color: #fff;
