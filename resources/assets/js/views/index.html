@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/fonts.css">
 
     <!-- JS -->
     <script type="text/javascript" src="../angular.min.js"></script>
     <script type="text/javascript" src="../angular-route.min.js"></script>
+    <script type="text/javascript" src="../Chart.min.js"></script>
+    <script type="text/javascript" src="../angular-chart.min.js"></script>
     <script type="text/javascript" src="../app.js"></script>
 
     <!--Controllers-->
@@ -23,13 +26,15 @@
     <script type="text/javascript" src="../js/controllers/menu/menu.js"></script>
     <script type="text/javascript" src="../js/controllers/home/home.js"></script>
     <script type="text/javascript" src="../js/controllers/consult/consult.js"></script>
+    <script type="text/javascript" src="../js/controllers/logout/logout.js"></script>
+
 
 
 
 
 <!--    <base href="/">-->
 </head>
-<body ng-class="background-img">
+<body ng-class="{{'backgroundImg'}}">
    <div ng-controller="menu" ng-include="'menu.html'" ng-class="{{'changeDisplay'}}">
     </div>
     <main ng-view>

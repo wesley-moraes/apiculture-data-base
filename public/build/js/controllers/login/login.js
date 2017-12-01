@@ -4,13 +4,18 @@ angular
 
 login.$inject = [
     '$scope',
-    '$window'
+    '$window',
+    '$rootScope'
 ];
 
 function login(
     $scope,
-     $window
+    $window,
+    $rootScope
 ){
+    //background-img
+    $rootScope.backgroundImg = 'background-img';
+
     //password show or hide
     $scope.showPassword = false;
     $scope.toggleShowPassword = function(){
@@ -24,5 +29,3 @@ function login(
         $window.location = '#!/home';
     }
 }
-
-

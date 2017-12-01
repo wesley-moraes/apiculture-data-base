@@ -5,6 +5,8 @@ $w30 : 30%;
 
 $darkest-orange : #c23500;
 $dark-orange : #fb4500;
+$dark-orange-box: #f26223; //custom box 1
+$dark-orange-title: #c6430b; //custom box 1
 $text-orange: #ff4600; //Also for the lines
 $light-orange: #ff8c1b;
 $text-yellow-green: #d8ff01; //The links
@@ -12,6 +14,50 @@ $text-white: #fff;
 $colorWhite: #fff;
 $text-yellow-link: #ffde00;
 
+//Mixins
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box; // stops bg color from leaking outside the border:
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//css transition and animation
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+//Fonts
+//@mixin font-montserratmedium($font-size, $margin, $color){
+//    font-family: 'montserratmedium';
+//    font-size: $font-size;
+//    color: $color;
+//    text-align: center;
+//    margin: $margin;
+//}
 
 //My reset
 input[type=number]::-webkit-inner-spin-button {
@@ -86,51 +132,31 @@ body{
     background-color: blue !important;
     color: blue !important;
 }
-
-//Mixins
-@mixin border-radius($radius){
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    border-radius: $radius;
-    background-clip: padding-box; // stops bg color from leaking outside the border:
-}
-
-@mixin clearfix() {
-    &:before,
-    &:after {
-        content: "";
+//buttons
+.btn-default-01{
+    width: 49%;
+    height: 50px;
+    a{
+        border: 1px solid $text-orange;
+        font-family: 'Helvetica-Extended-Light';
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $text-orange;
+        line-height: 50px;
         display: table;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        @include prefix(transition, all .5s, webkit moz);
+        &:hover{
+            background-color: $text-orange;
+            color: $text-white;
+            border: 1px solid $colorWhite;
+        }
     }
-    &:after {
-        clear: both;
-    }
 }
 
-//css transition and animation
-@mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    #{'-' + $prefix + '-' + $property}: $value;
-  }
 
-  // Output standard non-prefixed declaration
-  #{$property}: $value;
-}
-
-@mixin placeholder {
-  &::-webkit-input-placeholder {@content}
-  &:-moz-placeholder           {@content}
-  &::-moz-placeholder          {@content}
-  &:-ms-input-placeholder      {@content}
-}
-
-//Fonts
-//@mixin font-montserratmedium($font-size, $margin, $color){
-//    font-family: 'montserratmedium';
-//    font-size: $font-size;
-//    color: $color;
-//    text-align: center;
-//    margin: $margin;
-//}
 
 //Hexagono
 $hw : 120; //to keep the propotion
@@ -292,8 +318,21 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
             margin-bottom: 140px;
             h3{
                 color: $text-white;
-                font-size: 22px;
+                font-size: 20px;
+                font-family: 'Helvetica';
+                font-weight: bolder;
+                margin-bottom: 10px;
             }
+        }
+        nav ul li{
+                        a{
+                            margin-right: 15px;
+                            color: $text-white;
+                            font-family: 'Helvetica-Extended-Light';
+                            &:hover{
+                                color: $text-yellow-green;
+                            }
+                        }
         }
     }//wrapper-content-menu
 }
@@ -304,10 +343,191 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
     margin: 0 auto;
 //    background-color: yellow;
     position: relative;
-    top: -40px;
+    top: -50px;
     z-index: 7;
     color: $text-orange;
-}
+    font-family: 'Helvetica-Extended-Light';
+    .info-user-header{
+        height: 40px;
+        line-height: 40px;
+        span.bold-info{
+            font-weight: bold;
+        }
+    }
+    .custom-info-box-1{//Differents boxes
+        color: $text-white;
+        div{
+            div:nth-child(1){
+                height: 80px;
+                background-color: $dark-orange-title;
+                padding-left: 40px;
+                line-height: 80px;
+                font-size: 30px;
+                font-family: HelveticaNeue;
+                i{
+                    font-size: 40px;
+                    line-height: 84px;
+                    margin-right: 40px;
+                }
+            }
+            div:nth-child(2){
+                height: 125px;
+                background-color:  $dark-orange-box;
+                padding-left: 40px;
+                line-height: 125px;
+                p:nth-child(1).number{
+                    font-size: 100px;
+                    font-family: HelveticaNeue;
+                }
+                p:nth-child(2){
+                    font-size: 60px;
+                    margin-left: 20px;
+                    font-family: HelveticaNeue;
+                }
+                p:nth-child(1){
+                    font-size: 60px;
+                    font-family: HelveticaNeue;
+                }
+            }
+        }
+    }//custom-info-box ~ different boxes
+    .wrapper-content-infos.add-page{
+        .box-input-1{ //This name to refer a specific configuration
+            width: 79.16%;
+        }
+        .box-input-1 + div.f-right{
+            width: 19.20%;
+            border: 1px solid $text-orange;
+            margin-top: 49px;
+            height: 207px;
+            input[type="file"]{
+                display: none;
+            }
+            label{
+                position: relative;
+                width: 100%;
+                top: 185px;
+                left: 50px;
+                font-size: 11px;
+                @include prefix(transition, all .5s, webkit moz);
+                &:hover{
+                    cursor: pointer;
+                    font-size: 15px;
+                    left: 35px;
+                }
+            }
+        }
+    }
+    .wrapper-content-infos{ //consult!
+        .list-info:nth-child(1){margin-top: 15px;}
+        .list-info{
+            margin-top: 8px;
+            float: left;
+            width: 100%;
+                p{
+                    font-family: 'Futura-Normal';
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    font-weight: bold;
+                    border-bottom: 2px solid $text-orange;
+                    margin-bottom: 10px;
+                    padding-left: 5px;
+                    padding-right: 10px;
+                }
+                div.wrapper-left-infos{
+                    width: 71.42%;
+                    padding-left: 10px;
+                    div:nth-child(1){
+                        margin-right: 8px;
+                        ul li{
+                            margin-bottom: 10px;
+                        }
+                    }
+                    div:nth-child(2){
+                        ul li{
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                div.wrapper-right-img{
+                    width: 28.57%;
+                    height: 106px;
+                    div{
+                        width: 84px;
+                        height: 84px;
+                        margin: 0 auto;
+                        @include border-radius(50%);
+                        overflow: hidden;
+                        margin-top: 10px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+        }
+    }//list info
+    .wrapper-content-infos.wrapper-inputs{ //inputs, add, consult
+        .box-input-1{
+            div{
+                border-bottom: 1px solid $text-orange;
+                margin-bottom: 25px;
+                margin-top: 30px;
+                width: 100%;
+                label{
+                    float: left;
+                    color: $text-orange;
+                    width: 160px;
+                    margin-left: 15px;
+                    height: 20px;
+                    line-height: 20px;
+                }
+                input[type="text"]{
+                    width: 60%;
+                    border-left: 1px solid $text-orange;
+                    color: $text-orange;
+                    height: 20px;
+                    padding-left: 15px;
+                    @include placeholder{
+                        color: $text-orange;
+                    }
+                }
+            }
+            textarea{
+                border: 1px solid transparent;
+                border-left: 1px solid $text-orange;
+                color: $text-orange;
+                height: 40px;
+                padding-left: 15px;
+                width: 76%;
+                margin-bottom: -3px;
+                padding: 0px;
+                padding-left: 10px;
+                @include placeholder{
+                    color: $text-orange;
+                }
+                &:focus{
+                    outline-color: transparent;
+                }
+            }
+        }//box-input-1
+    }
+    .wrapper-content-infos.default-infos{
+        .box-input-1{
+            width: 100%;
+        }
+    }
+    .wrapper-chart{
+        width: 50%;
+        float: left;
+        canvas{
+            float: left;
+            width: 100% !important;
+            height: 50% !important;
+        }
+    }
+
+}//app-container
 
 .box-preset{
     border: 1px solid #d4d100;
@@ -324,3 +544,8 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
 .default-mb{ //default margin bottom
     margin-bottom: 20px;
 }
+.no-padding-20{
+    padding-left: 0;
+    padding-right: 0;
+}
+

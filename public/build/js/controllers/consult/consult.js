@@ -4,10 +4,10 @@ angular
 
 consult.$inject = [
     '$scope'
-]
+];
 
-consult function(
+function consult(
     $scope
 ){
-
+        //code here
 }

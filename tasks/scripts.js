@@ -10,7 +10,9 @@ config.vendor_path_js = [
     //Angular
     config.bower_path + '/angular/angular.min.js',
     config.bower_path + '/angular-route/angular-route.min.js',
-    config.bower_path + '/angular-animate/angular-animate.min.js'
+    config.bower_path + '/angular-animate/angular-animate.min.js',
+    config.bower_path + '/angular-chart.js/dist/angular-chart.min.js',
+    config.bower_path + '/chart.js/dist/Chart.min.js'
 ];
 
 gulp.task('copy-scripts', function(){
