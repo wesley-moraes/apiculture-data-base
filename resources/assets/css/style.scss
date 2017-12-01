@@ -483,6 +483,7 @@ $wh : ((50*$hw)/86)*1px; //to keep the propotion
                     line-height: 20px;
                 }
                 input[type="text"]{
+                    width: 60%;
                     border-left: 1px solid $text-orange;
                     color: $text-orange;
                     height: 20px;

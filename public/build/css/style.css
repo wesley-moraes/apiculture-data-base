@@ -509,6 +509,7 @@ body {
 }
 
 .app-container .wrapper-content-infos.wrapper-inputs .box-input-1 div input[type="text"] {
+  width: 60%;
   border-left: 1px solid #ff4600;
   color: #ff4600;
   height: 20px;

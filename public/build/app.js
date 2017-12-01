@@ -35,6 +35,10 @@ myBeeApp.config(['$routeProvider', '$locationProvider', function($routeProvider,
             templateUrl: 'configuration/configuration.html',
             controller: 'configuration'
         })
+        .when('/logout', {
+            templateUrl: 'login/login.html',
+            controller: 'logout'
+        })
         .otherwise({
             redirectTo: '/login'
         });
