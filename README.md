@@ -1,6 +1,8 @@
 # apiculture-data-base
 Base de Dados Apicultura
 
+##### Projeto descontinuado, funciona apenas local!
+
 #### Bower depende do [Node.js](http://nodejs.org/) e  [npm](http://npmjs.org/). Certifique-se que eles estejam instalados na máquina.
 
 # Instalação
